@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+
+	<h:outputLabel value="Cedula" />
+	<h:outputText value="#{personaMB.cedula}"   /> 
+	
+	<h:outputLabel value="Nombre" />
+	<h:outputText value="#{personaMB.nombre}"   /> 
+	
+	<h:outputLabel value="Apellido" />
+	<h:outputText value="#{personaMB.apellido}"   /> 
+	
+	<h:outputLabel value="Edad" />
+	<h:outputText value="#{personaMB.edad}"   /> 
+	
+	<h:outputLabel value="Telefono" />
+	<h:outputText value="#{personaMB.telefono}"   /> 
+	
+	<h:outputLabel value="Correo" />
+	<h:outputText value="#{personaMB.correo}"   /> 
+		
+		
+		<h:form>
+	
+		<h:commandButton action="/index" value="Index" />	
+								
+	</h:form>
+	
+	
+		
+</body> 
+</html>

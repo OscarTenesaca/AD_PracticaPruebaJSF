@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+<h:panelGrid columns="2">
+
+
+
+
+	<h:form>
+	
+		<table>
+			<tr>
+				<td> Cedula </td>
+				<td> <h:inputText value="#{personaMB.cedula}" />  </td>
+			</tr>
+			<tr>
+				<td> Nombre </td>
+				<td>  <h:inputText value="#{personaMB.nombre}" 
+		 							required="true"
+		 							requiredMessage="Ingrese el nombre"
+									id= "nombre" >
+									
+									<f:validator validatorId="validacionesFV" /> 
+		 			  </h:inputText>
+		 							
+		 		</td>				
+		 
+		 
+									<td> <h:message for= "nombre" style="color: red" />  </td>
+		
+			</tr>
+			
+			<tr>
+				<td> Apellido </td>
+				<td> <h:inputText value="#{personaMB.apellido}"
+									required="true"
+									requiredMessage="Ingrese el Apellido "
+									id="apellido">
+									<f:validator validatorId="validacionesFV" />
+									
+									</h:inputText>
+				 </td>
+				 
+				 <td> <h:message for= "apellido" style="color: red" />  </td>
+				 
+				 
+			</tr>
+			
+			<tr>
+				<td> Edad </td>
+				<td> <h:inputText value="#{personaMB.edad}"
+									required="true"
+									requiredMessage="Ingrese la Edad"
+									id="edad">
+									
+									<f:validator validatorId="vedad"/>
+									
+									</h:inputText>
+		
+				 </td>
+				 
+				  <td> <h:message for= "edad" style="color: red" />  </td>
+			</tr>
+			
+			<tr>
+				<td> Telefono </td>
+				<td> <h:inputText value="#{personaMB.telefono}"
+								  required="true"
+								  requiredMessage="Ingrese el celular"
+								  id="celular">
+								  
+								  <f:validator validatorId="vcelular" />
+								  
+					 </h:inputText>
+					 
+				 </td>
+				 
+				 <td> <h:message for= "celular" style="color: red" />  </td>
+				 
+			</tr>
+			
+			
+			<tr>
+				<td> Correo </td>
+				<td> <h:inputText value="#{personaMB.correo}" 
+									required="true"
+									requiredMessage="Ingrese el Correo"
+									id="correo">
+									<f:validator validatorId="vcorreo" />
+									
+					</h:inputText>
+									
+					</td>
+					
+					 <td> <h:message for= "correo" style="color: red" />  </td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td></td>
+				<td> <h:commandButton action="#{personaMB.mostra()}" value="enviar datos" /> </td>
+			</tr>
+
+
+		</table>
+		
+	</h:form>
+			
+		
+
+</h:panelGrid>
+
+
+</body> 
+</html>
